@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Shop - Your Premium Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>🛍️ ModernShop</h1>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="cart-icon">🛒 Cart (0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to ModernShop</h2>
+            <p>Discover the finest products curated just for you</p>
+            <button class="cta-button" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                Shop Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p>We are committed to bringing you the best products with exceptional quality and customer service. Our modern shop offers a wide range of items for everyone.</p>
+            <div class="features">
+                <div class="feature">
+                    <span class="icon">⚡</span>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">🛡️</span>
+                    <h3>Secure Payment</h3>
+                    <p>Safe transactions guaranteed</p>
+                </div>
+                <div class="feature">
+                    <span class="icon">💯</span>
+                    <h3>Best Quality</h3>
+                    <p>Premium products only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ModernShop. All rights reserved. | Created with ❤️ by Sigmaboyplayer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
