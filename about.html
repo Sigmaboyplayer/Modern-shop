@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Modern Shop</title>
-       <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>About - Modern Shop</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(2, 6, 23, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+ul li {
+  margin: 10px 0;
+}
+</style>
+
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-    </header>
-    <section id="company-story">
-        <h2>Our Story</h2>
-        <p>Modern Shop was founded in 2020 with a vision to bring the best shopping experience to our customers. Our journey started with a small team and a dream to revolutionize online shopping.</p>
-    </section>
-    <section id="mission">
-        <h2>Mission</h2>
-        <p>To provide a seamless and enjoyable shopping experience while delivering top-notch customer service.</p>
-    </section>
-    <section id="vision">
-        <h2>Vision</h2>
-        <p>To become the leading online retail platform recognized for innovation and customer satisfaction.</p>
-    </section>
-    <section id="team">
-        <h2>Our Team</h2>
-        <p>We are a diverse group of individuals with expertise in various fields dedicated to making Modern Shop a great place to shop.</p>
-    </section>
-    <section id="timeline">
-        <h2>Timeline</h2>
-        <ul>
-            <li>2020: Founded Modern Shop</li>
-            <li>2021: Expanded product offerings</li>
-            <li>2022: Reached 1 million customers</li>
-            <li>2023: Launched mobile app</li>
-        </ul>
-    </section>
-    <section id="statistics">
-        <h2>Statistics</h2>
-        <ul>
-            <li>Over 2 million active users</li>
-            <li>98% customer satisfaction rate</li>
-            <li>Fastest growing e-commerce platform in 2024</li>
-            <li>Shipping to over 50 countries</li>
-            <script src="script.js"></script>
-        </ul>
-    </section>
+
+<div class="container">
+  <h1>About Modern Shop</h1>
+  <p class="subtitle">Simple. Reliable. Modern shopping experience.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Our Story</h2>
+      <p>
+        Modern Shop was built to create a fast, stress-free online shopping experience.
+        We focus on simplicity, speed, and quality.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Our Mission</h2>
+      <p>
+        To provide <span class="highlight">affordable, high-quality products</span>
+        with a smooth and secure shopping process.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>✔ Fast delivery</li>
+        <li>✔ Secure checkout</li>
+        <li>✔ Reliable support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Our Vision</h2>
+      <p>
+        To become a trusted online shopping brand known for quality and customer satisfaction.
+      </p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
