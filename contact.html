@@ -1,29 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+<meta charset="UTF-8">
+<title>Contact Support - Modern Shop</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(2, 6, 23, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  backdrop-filter: blur(10px);
+}
+
+/* GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+/* INPUTS */
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: white;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 14px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* SUCCESS */
+#successMsg {
+  display: none;
+  margin-top: 15px;
+  color: #22c55e;
+}
+
+/* CONTACT SIDE */
+.info-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.info {
+  flex: 1;
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+}
+</style>
+
 </head>
 <body>
-    <h1>Contact Us</h1>
-    <form action="/submit-form" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br>
-        <button type="submit">Submit</button>
+
+<div class="container">
+  <h1>Contact Support</h1>
+  <p class="subtitle">Having an issue? Fill out the form and our team will respond quickly.</p>
+
+  <div class="card">
+    <form onsubmit="handleSubmit(event)">
+      
+      <div class="form-grid">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+
+        <select required>
+          <option value="">Select Issue Type</option>
+          <option>Order Issue</option>
+          <option>Payment Problem</option>
+          <option>Delivery Delay</option>
+          <option>General Question</option>
+        </select>
+
+        <input type="text" placeholder="Order ID (optional)">
+
+        <textarea class="full" rows="5" placeholder="Describe your issue..." required></textarea>
+      </div>
+
+      <button type="submit">Submit Request</button>
+      <p id="successMsg">✅ Your request has been submitted. We’ll get back to you soon.</p>
+
     </form>
-    <h2>Frequently Asked Questions (FAQ)</h2>
-    <h3>What is the return policy?</h3>
-    <p>We accept returns within 30 days of purchase.</p>
-    <h3>How can I contact customer service?</h3>
-    <p>You can reach our customer service at contact@example.com.</p>
-    <h2>Contact Information</h2>
-    <p>Email: support@example.com</p>
-    <p>Phone: (123) 456-7890</p>
-    <p>Address: 123 Example St, City, Country</p>
+  </div>
+
+  <div class="info-box">
+    <div class="info">
+      <h3>Email</h3>
+      <p>support@modernshop.com</p>
+    </div>
+
+    <div class="info">
+      <h3>Phone</h3>
+      <p>+234 XXX XXX XXXX</p>
+    </div>
+
+    <div class="info">
+      <h3>Location</h3>
+      <p>Lagos, Nigeria</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById("successMsg").style.display = "block";
+}
+</script>
+
 </body>
 </html>
